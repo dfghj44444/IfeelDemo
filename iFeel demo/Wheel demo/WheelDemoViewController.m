@@ -22,14 +22,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    CDCircle *circle = [[CDCircle alloc] initWithFrame:CGRectMake(10 , 90, 300, 300) numberOfSegments:10 ringWidth:80.f];
+    CDCircle *circle = [[CDCircle alloc] initWithFrame:CGRectMake(10 , 90, 300, 300) numberOfSegments:8 ringWidth:80.f];
     circle.dataSource = self;
     circle.delegate = self;
     CDCircleOverlayView *overlay = [[CDCircleOverlayView alloc] initWithCircle:circle];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1];//首页背景色
     
-    CGRect imageRect = (CGRect){105, 170, 110, 110};
+    CGRect imageRect = (CGRect){105, 180, 110, 110};
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageRect] ;
 
  
@@ -50,14 +50,15 @@
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"历史" style:UIBarButtonItemStyleBordered target:self action:@selector(OnRecordClick:)];
     self.navigationItem.leftBarButtonItem = leftItem;
     
-    [self.navigationItem setTitle:@"Ifeel 0.12"];
-
+    [self.navigationItem setTitle:@"Ifeel 0.13"];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    UIImage *image = [UIImage imageNamed: @"text.png"];
+    [self._ImgView setImage: image];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -68,22 +69,19 @@
 #pragma mark - Circle delegate & data source
 
 -(void) circle:(CDCircle *)circle didMoveToSegment:(NSInteger)segment thumb:(CDCircleThumb *)thumb {
-    UIImage *image = [UIImage imageNamed: @"xiaochunjie.png"];
+    NSArray* arrayPic = [NSArray arrayWithObjects: @"a", @"b",@"c",@"d",@"e",@"f",@"g",@"h",nil];
+    UIImage *image = [UIImage imageNamed: [NSString stringWithFormat:@"%@.png", [arrayPic objectAtIndex:segment]]];
+
     [self._ImgView setImage: image];
     
-    NSArray* array = [NSArray arrayWithObjects: @"开心",  @"难过",@"纠结",@"悲伤",@"不忿",@"大怒",@"惊诧",@"忧伤",@"怅然",@"顿悟",nil];
-    [self.lblFace setText:[NSString stringWithFormat:@"表情: %i%@", segment, [array objectAtIndex:segment]]];
-    
-    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"User did select item" message:[NSString stringWithFormat:@"Segment's tag: %i", segment] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    //[alert show];
-
-}
+    NSArray* array = [NSArray arrayWithObjects: @"吓尿",@"委屈",@"悲伤",@"尴尬",@"纳尼",@"呵呵",@"惊诧",@"卧槽",nil];
+    [self.lblFace setText:[NSString stringWithFormat:@"%@", [array objectAtIndex:segment]]];
+    }
 
 -(UIImage *) circle:(CDCircle *)circle iconForThumbAtRow:(NSInteger)row {
-    NSString *fileString = [[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:nil] lastObject];
-    
+
+    NSString *fileString = [[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"face/."] objectAtIndex:row*2];
     return [UIImage imageWithContentsOfFile:fileString];
-    
 }
 
 -(void)longGo:(UILongPressGestureRecognizer *)aGer{

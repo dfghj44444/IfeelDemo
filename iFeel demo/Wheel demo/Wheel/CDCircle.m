@@ -81,9 +81,6 @@
     CGPoint centerPoint = CGPointMake(rect.size.width/2, rect.size.height/2);
     
     
-    
-    
-    
     CGFloat deltaAngle;
     
     for (int i = 0; i < self.numberOfSegments; i++) {

@@ -67,7 +67,7 @@
         self.iconView = [[CDIconView alloc] initWithFrame:CGRectMake(CGRectGetMidX(frame), y, kIconViewWidth, kIconViewHeight)];
         self.iconView.center = CGPointMake(CGRectGetMidX(frame), y);
         [self addSubview:self.iconView];
-        self.gradientColors =  [NSArray arrayWithObjects:(id)[UIColor blackColor].CGColor,(id)[UIColor grayColor].CGColor,  nil];
+        self.gradientColors =  [NSArray arrayWithObjects:(id)[UIColor whiteColor].CGColor,(id)[UIColor whiteColor].CGColor,  nil];//环状背景色
     }
     return self;
 }
@@ -104,7 +104,7 @@
     [arc closePath];
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
+
     if (self.gradientFill == NO) {
         [arc fill];
     }
@@ -135,12 +135,9 @@
             }
         }
    
-    
-    
-    
+      
     drawLinearGradient(context, path, (__bridge CFArrayRef) self.gradientColors, CGGradientPositionHorizontal, la, rect);
     }
-    
     
     [[UIColor lightGrayColor] setStroke];
     [[UIColor lightGrayColor] setFill];

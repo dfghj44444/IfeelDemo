@@ -36,13 +36,16 @@
 		A80517F5183257AB00E9ADAA /* tail.png in Resources */ = {isa = PBXBuildFile; fileRef = A80517F2183257AB00E9ADAA /* tail.png */; };
 		A80517F718325E5B00E9ADAA /* date.png in Resources */ = {isa = PBXBuildFile; fileRef = A80517F618325E5B00E9ADAA /* date.png */; };
 		A81DC09718084A68003EDE3F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81DC09618084A68003EDE3F /* Default-568h@2x.png */; };
+		A842DC731858AF3C002D0659 /* Img in Resources */ = {isa = PBXBuildFile; fileRef = A842DC721858AF3C002D0659 /* Img */; };
+		A842DC771858BC3A002D0659 /* round1.png in Resources */ = {isa = PBXBuildFile; fileRef = A842DC741858BC3A002D0659 /* round1.png */; };
+		A842DC781858BC3A002D0659 /* round2.png in Resources */ = {isa = PBXBuildFile; fileRef = A842DC751858BC3A002D0659 /* round2.png */; };
+		A842DC791858BC3A002D0659 /* text.png in Resources */ = {isa = PBXBuildFile; fileRef = A842DC761858BC3A002D0659 /* text.png */; };
 		A8452C011826B1CA00F04759 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8452C001826B1CA00F04759 /* RecordViewController.m */; };
 		A848A8DA1824A69000EE73D1 /* WritingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848A8D91824A69000EE73D1 /* WritingView.xib */; };
 		A848A8DD1824AE0300EE73D1 /* WrtingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A848A8DB1824AE0300EE73D1 /* WrtingViewController.m */; };
 		A867985D1827C78F00D50066 /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = A867985C1827C78F00D50066 /* feedback.png */; };
 		A86798611827CC0400D50066 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A867985F1827CC0400D50066 /* FeedBackViewController.m */; };
 		A86798621827CC0400D50066 /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A86798601827CC0400D50066 /* FeedBackViewController.xib */; };
-		A86B74D31823E0EB00C957C9 /* xiaochunjie.png in Resources */ = {isa = PBXBuildFile; fileRef = A86B74D21823E0EB00C957C9 /* xiaochunjie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,10 @@
 		A80517F2183257AB00E9ADAA /* tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tail.png; sourceTree = "<group>"; };
 		A80517F618325E5B00E9ADAA /* date.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = date.png; sourceTree = "<group>"; };
 		A81DC09618084A68003EDE3F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A842DC721858AF3C002D0659 /* Img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Img; path = ../Img; sourceTree = "<group>"; };
+		A842DC741858BC3A002D0659 /* round1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round1.png; sourceTree = "<group>"; };
+		A842DC751858BC3A002D0659 /* round2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round2.png; sourceTree = "<group>"; };
+		A842DC761858BC3A002D0659 /* text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text.png; sourceTree = "<group>"; };
 		A8452BFF1826B1CA00F04759 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
 		A8452C001826B1CA00F04759 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
 		A848A8D91824A69000EE73D1 /* WritingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WritingView.xib; sourceTree = "<group>"; };
@@ -96,7 +103,6 @@
 		A867985E1827CC0400D50066 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		A867985F1827CC0400D50066 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		A86798601827CC0400D50066 /* FeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackViewController.xib; sourceTree = "<group>"; };
-		A86B74D21823E0EB00C957C9 /* xiaochunjie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaochunjie.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,11 @@
 		3C24BF35154FA74200084C39 = {
 			isa = PBXGroup;
 			children = (
+				A842DC721858AF3C002D0659 /* Img */,
 				A81DC09618084A68003EDE3F /* Default-568h@2x.png */,
 				3C24BF7E154FA86D00084C39 /* QuartzCore.framework */,
 				3C24BF7C154FA86000084C39 /* AudioToolbox.framework */,
-				3C24BF4A154FA74300084C39 /* Wheel demo */,
+				3C24BF4A154FA74300084C39 /* iFeel  */,
 				3C24BF43154FA74300084C39 /* Frameworks */,
 				3C24BF41154FA74300084C39 /* Products */,
 			);
@@ -145,7 +152,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C24BF4A154FA74300084C39 /* Wheel demo */ = {
+		3C24BF4A154FA74300084C39 /* iFeel  */ = {
 			isa = PBXGroup;
 			children = (
 				A80517E31832448D00E9ADAA /* BrowseViewController.h */,
@@ -167,12 +174,16 @@
 				3C24BF61154FA76700084C39 /* Wheel */,
 				3C24BF4B154FA74300084C39 /* Supporting Files */,
 			);
+			name = "iFeel ";
 			path = "Wheel demo";
 			sourceTree = "<group>";
 		};
 		3C24BF4B154FA74300084C39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A842DC741858BC3A002D0659 /* round1.png */,
+				A842DC751858BC3A002D0659 /* round2.png */,
+				A842DC761858BC3A002D0659 /* text.png */,
 				A80517F0183257AB00E9ADAA /* content.png */,
 				A80517F618325E5B00E9ADAA /* date.png */,
 				A80517F1183257AB00E9ADAA /* head.png */,
@@ -182,7 +193,6 @@
 				A80517EC1832510A00E9ADAA /* tail.jpg */,
 				A867985C1827C78F00D50066 /* feedback.png */,
 				A80517E81832470100E9ADAA /* heart.png */,
-				A86B74D21823E0EB00C957C9 /* xiaochunjie.png */,
 				3C24BF77154FA80C00084C39 /* _arrow_up2.png */,
 				3C24BF75154FA80200084C39 /* iPod Click.aiff */,
 				3C24BF4C154FA74300084C39 /* Wheel demo-Info.plist */,
@@ -241,7 +251,7 @@
 				CLASSPREFIX = WheelDemo;
 				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = 3C24BF3A154FA74200084C39 /* Build configuration list for PBXProject "Wheel demo" */;
+			buildConfigurationList = 3C24BF3A154FA74200084C39 /* Build configuration list for PBXProject "iFeel demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -264,23 +274,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C24BF4F154FA74300084C39 /* InfoPlist.strings in Resources */,
+				A842DC731858AF3C002D0659 /* Img in Resources */,
 				A80517ED1832510A00E9ADAA /* head.jpg in Resources */,
 				3C24BF5B154FA74300084C39 /* WheelDemoViewController.xib in Resources */,
 				A80517F5183257AB00E9ADAA /* tail.png in Resources */,
 				A80517F3183257AB00E9ADAA /* content.png in Resources */,
 				A80517E91832470100E9ADAA /* heart.png in Resources */,
+				A842DC781858BC3A002D0659 /* round2.png in Resources */,
 				3C24BF76154FA80200084C39 /* iPod Click.aiff in Resources */,
 				A81DC09718084A68003EDE3F /* Default-568h@2x.png in Resources */,
 				A867985D1827C78F00D50066 /* feedback.png in Resources */,
+				A842DC771858BC3A002D0659 /* round1.png in Resources */,
 				A80517EF1832510A00E9ADAA /* tail.jpg in Resources */,
 				A86798621827CC0400D50066 /* FeedBackViewController.xib in Resources */,
 				A80517F718325E5B00E9ADAA /* date.png in Resources */,
 				A80517E71832448D00E9ADAA /* BrowseViewController.xib in Resources */,
 				3C24BF78154FA80C00084C39 /* _arrow_up2.png in Resources */,
 				A848A8DA1824A69000EE73D1 /* WritingView.xib in Resources */,
+				A842DC791858BC3A002D0659 /* text.png in Resources */,
 				A80517F4183257AB00E9ADAA /* head.png in Resources */,
 				A80517EE1832510A00E9ADAA /* content.jpg in Resources */,
-				A86B74D31823E0EB00C957C9 /* xiaochunjie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +439,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C24BF3A154FA74200084C39 /* Build configuration list for PBXProject "Wheel demo" */ = {
+		3C24BF3A154FA74200084C39 /* Build configuration list for PBXProject "iFeel demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C24BF5C154FA74300084C39 /* Debug */,
