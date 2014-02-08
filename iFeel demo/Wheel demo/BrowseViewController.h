@@ -11,3 +11,11 @@
 @interface BrowseViewController : UITableViewController
 
 @end
+
+
+
+@interface FeelRecord : NSObject
+@property NSString *content;
+@property int face;
+@property NSString *datetime;
+@end

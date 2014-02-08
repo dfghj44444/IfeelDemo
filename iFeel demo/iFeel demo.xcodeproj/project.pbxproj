@@ -39,6 +39,7 @@
 		A8227ED018A6132B00879444 /* dateD12.png in Resources */ = {isa = PBXBuildFile; fileRef = A8227ECE18A6132B00879444 /* dateD12.png */; };
 		A8227ED118A6132B00879444 /* dateM11.png in Resources */ = {isa = PBXBuildFile; fileRef = A8227ECF18A6132B00879444 /* dateM11.png */; };
 		A8227ED318A61C9600879444 /* feel_big.png in Resources */ = {isa = PBXBuildFile; fileRef = A8227ED218A61C9600879444 /* feel_big.png */; };
+		A8227ED518A6596900879444 /* feel1.png in Resources */ = {isa = PBXBuildFile; fileRef = A8227ED418A6596900879444 /* feel1.png */; };
 		A82FCC371893D058002716F9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A82FCC361893D058002716F9 /* libsqlite3.dylib */; };
 		A82FCC441893DDCE002716F9 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A82FCC3A1893DDCE002716F9 /* FMDatabase.m */; };
 		A82FCC451893DDCE002716F9 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A82FCC3C1893DDCE002716F9 /* FMDatabaseAdditions.m */; };
@@ -102,6 +103,7 @@
 		A8227ECE18A6132B00879444 /* dateD12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dateD12.png; sourceTree = "<group>"; };
 		A8227ECF18A6132B00879444 /* dateM11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dateM11.png; sourceTree = "<group>"; };
 		A8227ED218A61C9600879444 /* feel_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feel_big.png; sourceTree = "<group>"; };
+		A8227ED418A6596900879444 /* feel1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feel1.png; sourceTree = "<group>"; };
 		A82FCC361893D058002716F9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A82FCC391893DDCE002716F9 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		A82FCC3A1893DDCE002716F9 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				A842DC741858BC3A002D0659 /* round1.png */,
 				A842DC751858BC3A002D0659 /* round2.png */,
 				A8227ED218A61C9600879444 /* feel_big.png */,
+				A8227ED418A6596900879444 /* feel1.png */,
 				A842DC761858BC3A002D0659 /* text.png */,
 				A851108718A4C7AC004B2A5C /* text2.png */,
 				A8227ECC18A6124E00879444 /* head1.png */,
@@ -342,6 +345,7 @@
 				A848A8DA1824A69000EE73D1 /* WritingView.xib in Resources */,
 				A8227ED018A6132B00879444 /* dateD12.png in Resources */,
 				A842DC791858BC3A002D0659 /* text.png in Resources */,
+				A8227ED518A6596900879444 /* feel1.png in Resources */,
 				A80517EE1832510A00E9ADAA /* content.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

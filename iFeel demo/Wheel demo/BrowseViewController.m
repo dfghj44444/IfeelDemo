@@ -7,6 +7,8 @@
 //
 
 #import "BrowseViewController.h"
+#import "FMDatabase.h"
+#import <sqlite3.h>
 #define originalHeight 25.0f
 #define newHeight 85.0f
 #define isOpen @"85.0f"
@@ -21,6 +23,7 @@
     NSMutableDictionary *dicClicked;
     CGFloat mHeight;
     NSInteger sectionIndex;
+    NSMutableArray *_RecordArray;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,6 +35,8 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -41,6 +46,25 @@
     sectionIndex = 0;
     dicClicked = [NSMutableDictionary dictionaryWithCapacity:3];
     
+    //解析数据库
+    NSString* docsdir = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString* dbpath = [docsdir stringByAppendingPathComponent:@"iFeel.sqlite"];
+    FMDatabase* db = [FMDatabase databaseWithPath:dbpath];//没有则自己创建
+    [db open];
+    
+    FMResultSet *rs = [db executeQuery:@"select * from faces"];
+    
+    _RecordArray = [NSMutableArray arrayWithCapacity:10];
+    while([rs next]) {
+        FeelRecord *obj = [[FeelRecord alloc]init];
+        obj.face = [rs intForColumn:@"face"];
+        obj.content = [rs stringForColumn:@"content"];
+        obj.datetime = [rs stringForColumn:@"recordDate"];
+    
+        [_RecordArray addObject:obj];
+    }
+    
+    [db close];
     /*CGRect imageRect = (CGRect){0, 0, 320, 140};
     UIImageView *aImageView = [[UIImageView alloc] initWithFrame:imageRect] ;
     UIImage *image = [UIImage imageNamed: @"head.png"];
@@ -92,42 +116,90 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        static NSString *contentIndentifer = @"Container";
-        if (indexPath.row != 0) {//第一个
+    count++;
+    static NSString *contentIndentifer = @"Container";
+    if (indexPath.section == 0) {
+        UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"title"];;
+        if (headerView == nil) {
+            headerView = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"title"];
+        }
+        
+        if (indexPath.row == 0) {
+            CGRect imageRect = (CGRect){0, 0, 320, 140};
+            UIImageView *aImageView = [[UIImageView alloc] initWithFrame:imageRect] ;
+            UIImage *image = [UIImage imageNamed: @"head1.png"];
+            [aImageView setImage: image];
+            //[self.view addSubview:aImageView];
+            [headerView addSubview:aImageView];
+        }
+        else
+        {
+            UIImageView *ImageViewDateM = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 46, 30)] ;
+            UIImage *imageDate = [UIImage imageNamed: @"dateM11.png"];
+            [ImageViewDateM setImage: imageDate];
+            [headerView addSubview:ImageViewDateM];
+            
+            UIImageView *ImageViewDateD = [[UIImageView alloc] initWithFrame:CGRectMake(60, 0, 53, 30)] ;
+            UIImage *imageDay = [UIImage imageNamed: @"dateD12.png"];
+            [ImageViewDateD setImage: imageDay];
+            [headerView addSubview:ImageViewDateD];
+        }
+        return headerView;
+    }
+    else{//这里开始才是正文
+        if (indexPath.row != 0) {//第2个,里面是内容
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:contentIndentifer];
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:contentIndentifer];
             }
-            NSString *statisticsContent = @"rlf:就今天天气好晴朗aassscccvcvbcv恶如通过对会计法规科技的复古包包vjhcv";
+            FeelRecord* aRecord =_RecordArray[indexPath.section];
+            NSString *statisticsContent = aRecord.content;
             cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
-            cell.textLabel.text = statisticsContent;
+            if (statisticsContent.length > 0 ) {
+                cell.textLabel.text = statisticsContent;
+            }
+            else{
+                NSArray* array = [NSArray arrayWithObjects: @"开心",  @"难过",@"纠结",@"悲伤",@"不忿",@"大怒",@"惊诧",@"忧伤",@"怅然",@"顿悟",nil];
+                cell.textLabel.text = [array objectAtIndex:aRecord.face%8];
+            }
             cell.textLabel.textColor = [UIColor brownColor];
             cell.textLabel.opaque = NO; // 选中Opaque表示视图后面的任何内容都不应该绘制
             cell.textLabel.numberOfLines = 9;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
+        else{
 
-        static NSString *CellIdentifier = @"Cell";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            static NSString *CellIdentifier = @"Cell";
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+            }
+            cell.imageView.image = [UIImage imageNamed:@"feel1.png"];
+
+            FeelRecord* aRecord =_RecordArray[indexPath.section];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+            [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+            [formatter setDateFormat : @"yyyy-MM-dd HH:mm:ss"];
+            NSDate *dateTime = [formatter dateFromString:aRecord.datetime];
+            [formatter setDateFormat : @"yyyy-MM-dd HH:mm"];
+            [formatter setTimeZone:[NSTimeZone localTimeZone]];
+            NSString *strDateTime =[formatter stringFromDate:dateTime];
+
+            cell.textLabel.text = [NSString stringWithFormat:@"%@",strDateTime];
+            return cell;
         }
-        cell.imageView.image = [UIImage imageNamed:@"content.png"];
-        NSArray* array = [NSArray arrayWithObjects: @"开心",  @"难过",@"纠结",@"悲伤",@"不忿",@"大怒",@"惊诧",@"忧伤",@"怅然",@"顿悟",nil];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@",[array objectAtIndex:count%8]];
-        count++;
-        return cell;
+    }
+
+    return nil;
 }
 
 
 //Section的标题栏高度
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0)
-        return 170;
-    else
-        return 1.0f;
+     return 1.0f;
 }
 
 
@@ -136,30 +208,6 @@
     CGRect headerFrame = CGRectMake(0, 0, 300, 30);
     CGFloat y = 2;
 
-    if (section == 0) {
-        headerFrame = CGRectMake(0, 0, 320, 200);
-        UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
-        
-        CGRect imageRect = (CGRect){0, 0, 320, 140};
-        UIImageView *aImageView = [[UIImageView alloc] initWithFrame:imageRect] ;
-        UIImage *image = [UIImage imageNamed: @"head1.png"];
-        [aImageView setImage: image];
-        //[self.view addSubview:aImageView];
-        [headerView addSubview:aImageView];
-        
-        imageRect = (CGRect){0, 140, 92, 59};
-        UIImageView *ImageViewDateM = [[UIImageView alloc] initWithFrame:imageRect] ;
-        UIImage *imageDate = [UIImage imageNamed: @"dateM11.png"];
-        [ImageViewDateM setImage: imageDate];
-        [headerView addSubview:ImageViewDateM];
-        
-        UIImageView *ImageViewDateD = [[UIImageView alloc] initWithFrame:CGRectMake(100, 140, 106, 60)] ;
-        UIImage *imageDay = [UIImage imageNamed: @"dateD12.png"];
-        [ImageViewDateD setImage: imageDay];
-        [headerView addSubview:ImageViewDateD];
-        
-        return headerView;
-    }
     return nil;
     
     UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
@@ -203,16 +251,29 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) {
-        if ([[dicClicked objectForKey:indexPath] isEqualToString: isOpen])
-            return [[dicClicked objectForKey:indexPath] floatValue];
-        else
-            return originalHeight;
+    if(indexPath.section == 0)
+    {
+        return indexPath.row == 0 ? 140:40;
     }
-    else {
-        return 45.0f;
+    else{
+        if (indexPath.row == 0) {
+            if ([[dicClicked objectForKey:indexPath] isEqualToString: isOpen])
+                return [[dicClicked objectForKey:indexPath] floatValue];
+            else
+                return originalHeight;
+        }
+        else {
+            return 45.0f;
+        }
     }
+
+    
 }
 
+
+@end
+
+
+@implementation FeelRecord
 
 @end
