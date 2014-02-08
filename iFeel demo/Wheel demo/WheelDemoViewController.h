@@ -11,9 +11,11 @@
 #import "WrtingViewController.h"
 #import "FeedBackViewController.h"
 @interface WheelDemoViewController : UIViewController <CDCircleDelegate, CDCircleDataSource>
-{}
+{
+    int _curSegment;
+}
 
-
++ (void)AddRecord: (int)nSegment withString: (NSString*)strContent;
 - (IBAction)testClick:(id)sender;
 - (IBAction)OnRecordClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblFace;

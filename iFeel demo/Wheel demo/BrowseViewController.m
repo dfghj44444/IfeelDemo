@@ -137,8 +137,6 @@
     CGFloat y = 2;
 
     if (section == 0) {
-
-        
         headerFrame = CGRectMake(0, 0, 300, 100);
         UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
         

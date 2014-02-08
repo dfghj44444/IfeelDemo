@@ -8,6 +8,7 @@
 
 #include "WrtingViewController.h"
 #include "FeedBackViewController.h"
+#include "WheelDemoViewController.h"
 @interface WritingViewController()
 
 @end
@@ -77,18 +78,15 @@
     //[self presentModalViewController:aViewController animated:TRUE];
     //[self.navigationController pushViewController:aViewController animated:TRUE];
     //[self.navigationController ];
-    CGRect imageRect = (CGRect){0, 0, 320, 480};
-    UIImageView *aImageView = [[UIImageView alloc] initWithFrame:imageRect] ;
-    UIImage *image = [UIImage imageNamed: @"feedback.png"];
-    [aImageView setImage: image];
-    //[self.view addSubview:aImageView];
-    [self.view addSubview:aImageView];
+    NSUserDefaults *accountDefaults = [NSUserDefaults standardUserDefaults];
+    int nSegment = [accountDefaults integerForKey: @"curSegment"];
+    [WheelDemoViewController  AddRecord:nSegment withString:self.txtMain.text];
     
+    FeedBackViewController *aViewController = [[FeedBackViewController alloc] init];
+    [self.navigationController pushViewController:aViewController animated:TRUE];
 }
 
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
-
-{
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     
     if ([text isEqualToString:@"\n"]) {
         

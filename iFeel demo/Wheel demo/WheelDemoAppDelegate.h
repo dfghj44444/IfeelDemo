@@ -16,5 +16,5 @@
 
 @property (strong, nonatomic) WheelDemoViewController *viewController;
 
-
+//加个方法提供接口访问viecontrollerde当前segment
 @end

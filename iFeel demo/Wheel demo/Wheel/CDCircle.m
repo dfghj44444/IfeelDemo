@@ -33,7 +33,7 @@
         self.numberOfSegments = nSegments;
         self.separatorStyle = CDCircleThumbsSeparatorBasic;
         self.ringWidth = width;
-        self.circleColor = [UIColor clearColor];
+        self.circleColor = [UIColor colorWithRed:0.1 green:0.80f blue:0.8f alpha:0.80f];//中心圆色
         
         
         CGRect rect1 = CGRectMake(0, 0, CGRectGetHeight(frame) - (2*ringWidth), CGRectGetWidth(frame) - (2*ringWidth));
@@ -102,7 +102,6 @@
             [thumb.iconView setIsSelected:YES];
             self.recognizer.currentThumb = thumb;
         }
-       
         
         //set position of the thumb
         thumb.layer.position = CGPointMake(x, yi);
@@ -114,9 +113,6 @@
     }
     
     [self setTransform:CGAffineTransformRotate(self.transform,deltaAngle)];
-      
-    
-    
     
    
  }
