@@ -137,27 +137,31 @@
     CGFloat y = 2;
 
     if (section == 0) {
-        headerFrame = CGRectMake(0, 0, 300, 100);
+        headerFrame = CGRectMake(0, 0, 320, 200);
         UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
         
         CGRect imageRect = (CGRect){0, 0, 320, 140};
         UIImageView *aImageView = [[UIImageView alloc] initWithFrame:imageRect] ;
-        UIImage *image = [UIImage imageNamed: @"head.png"];
+        UIImage *image = [UIImage imageNamed: @"head1.png"];
         [aImageView setImage: image];
         //[self.view addSubview:aImageView];
         [headerView addSubview:aImageView];
         
-        imageRect = (CGRect){0, 140, 320, 30};
-        UIImageView *ImageViewDate = [[UIImageView alloc] initWithFrame:imageRect] ;
-        UIImage *image2 = [UIImage imageNamed: @"date.png"];
-        [ImageViewDate setImage: image2];
-        [headerView addSubview:ImageViewDate];
-        return headerView;
+        imageRect = (CGRect){0, 140, 92, 59};
+        UIImageView *ImageViewDateM = [[UIImageView alloc] initWithFrame:imageRect] ;
+        UIImage *imageDate = [UIImage imageNamed: @"dateM11.png"];
+        [ImageViewDateM setImage: imageDate];
+        [headerView addSubview:ImageViewDateM];
         
+        UIImageView *ImageViewDateD = [[UIImageView alloc] initWithFrame:CGRectMake(100, 140, 106, 60)] ;
+        UIImage *imageDay = [UIImage imageNamed: @"dateD12.png"];
+        [ImageViewDateD setImage: imageDay];
+        [headerView addSubview:ImageViewDateD];
+        
+        return headerView;
     }
+    return nil;
     
-    //if(count < 4)
-        return nil;
     UIView *headerView = [[UIView alloc] initWithFrame:headerFrame];
     UILabel *dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(20, y, 240, 24)];//日期标签
     dateLabel.font=[UIFont boldSystemFontOfSize:16.0f];
