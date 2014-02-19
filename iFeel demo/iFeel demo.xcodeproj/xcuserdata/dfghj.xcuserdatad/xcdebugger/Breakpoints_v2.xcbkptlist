@@ -426,9 +426,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "278"
-            endingLineNumber = "278"
-            landmarkName = "@implementation FeelRecord"
-            landmarkType = "3">
+            endingLineNumber = "278">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -442,9 +440,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "@implementation FeelRecord"
-            landmarkType = "3">
+            endingLineNumber = "277">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

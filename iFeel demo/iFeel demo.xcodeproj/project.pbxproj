@@ -54,6 +54,7 @@
 		A848A8DA1824A69000EE73D1 /* WritingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848A8D91824A69000EE73D1 /* WritingView.xib */; };
 		A848A8DD1824AE0300EE73D1 /* WrtingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A848A8DB1824AE0300EE73D1 /* WrtingViewController.m */; };
 		A851108818A4C7AC004B2A5C /* text2.png in Resources */ = {isa = PBXBuildFile; fileRef = A851108718A4C7AC004B2A5C /* text2.png */; };
+		A8633B1718B4FE520084D9C4 /* img in Resources */ = {isa = PBXBuildFile; fileRef = A8633B1618B4FE520084D9C4 /* img */; };
 		A86798611827CC0400D50066 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A867985F1827CC0400D50066 /* FeedBackViewController.m */; };
 		A86798621827CC0400D50066 /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A86798601827CC0400D50066 /* FeedBackViewController.xib */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		A848A8DB1824AE0300EE73D1 /* WrtingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrtingViewController.m; sourceTree = "<group>"; };
 		A848A8DC1824AE0300EE73D1 /* WrtingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrtingViewController.h; sourceTree = "<group>"; };
 		A851108718A4C7AC004B2A5C /* text2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text2.png; sourceTree = "<group>"; };
+		A8633B1618B4FE520084D9C4 /* img */ = {isa = PBXFileReference; lastKnownFileType = folder; path = img; sourceTree = "<group>"; };
 		A867985E1827CC0400D50066 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		A867985F1827CC0400D50066 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		A86798601827CC0400D50066 /* FeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackViewController.xib; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		3C24BF4B154FA74300084C39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8633B1618B4FE520084D9C4 /* img */,
 				A842DC741858BC3A002D0659 /* round1.png */,
 				A842DC751858BC3A002D0659 /* round2.png */,
 				A8227ED218A61C9600879444 /* feel_big.png */,
@@ -336,6 +339,7 @@
 				A86798621827CC0400D50066 /* FeedBackViewController.xib in Resources */,
 				A8227ED318A61C9600879444 /* feel_big.png in Resources */,
 				A8227EC918A5EB4400879444 /* text3.png in Resources */,
+				A8633B1718B4FE520084D9C4 /* img in Resources */,
 				A80517F718325E5B00E9ADAA /* date.png in Resources */,
 				A8227ECD18A6124E00879444 /* head1.png in Resources */,
 				A8227ECB18A5EB5600879444 /* p3.jpg in Resources */,
