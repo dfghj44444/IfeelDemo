@@ -36,8 +36,8 @@
     [self.view addSubview:overlay];
     
     //添加左右按钮
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleBordered target:self action:@selector(testClick:)];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    //UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleBordered target:self action:@selector(testClick:)];
+    //self.navigationItem.rightBarButtonItem = rightItem;
     
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"历史" style:UIBarButtonItemStyleBordered target:self action:@selector(OnRecordClick:)];
     self.navigationItem.leftBarButtonItem = leftItem;
@@ -162,7 +162,7 @@
         NSLog(@"nil");
         //[self presentModalViewController:aViewController animated:TRUE];
     }
-    else
+    else if ( self->_curSegment != -1)
     {
         NSLog(@"not nil");
         [[self navigationController]  pushViewController:aViewController animated:true];

@@ -118,7 +118,7 @@
 {
     count++;
     static NSString *contentIndentifer = @"Container";
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0) {//头部标题栏
         UITableViewCell *headerView = [tableView dequeueReusableCellWithIdentifier:@"title"];;
         if (headerView == nil) {
             headerView = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"title"];
@@ -134,13 +134,23 @@
         }
         else
         {
-            UIImageView *ImageViewDateM = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 46, 30)] ;
-            UIImage *imageDate = [UIImage imageNamed: @"dateM11.png"];
+            NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            NSDate *now;
+            NSDateComponents *comps = [[NSDateComponents alloc] init];
+            NSInteger unitFlags =  NSMonthCalendarUnit | NSDayCalendarUnit ;
+            now=[NSDate date];
+            comps = [calendar components:unitFlags fromDate:now];
+
+            int month = [comps month];
+            int day = [comps day];
+
+            UIImageView *ImageViewDateM = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 50, 25)] ;
+            UIImage *imageDate = [UIImage imageNamed: [NSString stringWithFormat:@"img/m%d.png",month]];
             [ImageViewDateM setImage: imageDate];
             [headerView addSubview:ImageViewDateM];
             
-            UIImageView *ImageViewDateD = [[UIImageView alloc] initWithFrame:CGRectMake(60, 0, 53, 30)] ;
-            UIImage *imageDay = [UIImage imageNamed: @"dateD12.png"];
+            UIImageView *ImageViewDateD = [[UIImageView alloc] initWithFrame:CGRectMake(60, 0, 50, 25)] ;
+            UIImage *imageDay = [UIImage imageNamed: [NSString stringWithFormat:@"img/%d.png",day]];
             [ImageViewDateD setImage: imageDay];
             [headerView addSubview:ImageViewDateD];
         }

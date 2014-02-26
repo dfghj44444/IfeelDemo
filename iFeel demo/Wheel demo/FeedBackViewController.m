@@ -34,6 +34,23 @@
     
     UIBarButtonItem* backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonSystemItemCancel target:self action:@selector(doback)];
     self.navigationItem.leftBarButtonItem = backItem;
+    
+    //加上年月
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *now;
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags =  NSMonthCalendarUnit | NSDayCalendarUnit ;
+    now=[NSDate date];
+    comps = [calendar components:unitFlags fromDate:now];
+    
+    int month = [comps month];
+    int day = [comps day];
+    UIImage *imageDate = [UIImage imageNamed: [NSString stringWithFormat:@"img/m%d.png",month]];
+    [_imgMonth setImage: imageDate];
+    
+    UIImage *imageDay = [UIImage imageNamed: [NSString stringWithFormat:@"img/%d.png",day]];
+    [_imgDay setImage: imageDay];
+
 }
 
 - (void)didReceiveMemoryWarning
