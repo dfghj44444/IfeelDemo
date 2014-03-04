@@ -296,6 +296,11 @@
 			attributes = {
 				CLASSPREFIX = WheelDemo;
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					3C24BF3F154FA74300084C39 = {
+						DevelopmentTeam = HR93X4SZT3;
+					};
+				};
 			};
 			buildConfigurationList = 3C24BF3A154FA74200084C39 /* Build configuration list for PBXProject "iFeel demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -441,7 +446,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -462,13 +467,14 @@
 		3C24BF5F154FA74300084C39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wheel demo/Wheel demo-Prefix.pch";
 				INFOPLIST_FILE = "Wheel demo/Wheel demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3BCAFFC4-26C5-45B9-AA19-D144590B85EF.mobileprovision";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
@@ -477,14 +483,15 @@
 		3C24BF60154FA74300084C39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wheel demo/Wheel demo-Prefix.pch";
 				INFOPLIST_FILE = "Wheel demo/Wheel demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3BCAFFC4-26C5-45B9-AA19-D144590B85EF.mobileprovision";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = app;
 			};
