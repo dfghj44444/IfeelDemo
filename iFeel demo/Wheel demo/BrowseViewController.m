@@ -162,7 +162,7 @@
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:contentIndentifer];
             }
-            FeelRecord* aRecord =_RecordArray[indexPath.section];
+            FeelRecord* aRecord =_RecordArray[indexPath.section-1];
             NSString *statisticsContent = aRecord.content;
             cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
             if (statisticsContent.length > 0 ) {
@@ -179,7 +179,6 @@
             return cell;
         }
         else{
-
             static NSString *CellIdentifier = @"Cell";
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
             if (cell == nil) {
@@ -187,7 +186,9 @@
             }
             cell.imageView.image = [UIImage imageNamed:@"feel1.png"];
 
-            FeelRecord* aRecord =_RecordArray[indexPath.section];
+            int nSection = indexPath.section;
+
+            FeelRecord* aRecord =_RecordArray[nSection-1];
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
             [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
@@ -198,6 +199,7 @@
             NSString *strDateTime =[formatter stringFromDate:dateTime];
 
             cell.textLabel.text = [NSString stringWithFormat:@"%@",strDateTime];
+            
             return cell;
         }
     }

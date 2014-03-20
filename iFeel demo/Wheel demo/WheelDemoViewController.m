@@ -80,7 +80,7 @@
 
 -(void) circle:(CDCircle *)circle didMoveToSegment:(NSInteger)segment thumb:(CDCircleThumb *)thumb {
     NSArray* arrayPic = [NSArray arrayWithObjects: @"a",@"b",@"c",@"d",@"e",@"f",@"g",@"h",nil];
-    UIImage *image = [UIImage imageNamed: [NSString stringWithFormat:@"%@.png", [arrayPic objectAtIndex:segment]]];
+    UIImage *image = [UIImage imageNamed: [NSString stringWithFormat:@"face/%@.png", [arrayPic objectAtIndex:segment]]];
 
     NSArray* array = [NSArray arrayWithObjects: @"吓尿",@"委屈",@"悲伤",@"尴尬",@"纳尼",@"呵呵",@"惊诧",@"卧槽",nil];
     [self.lblFace setText:[NSString stringWithFormat:@"%@", [array objectAtIndex:segment]]];

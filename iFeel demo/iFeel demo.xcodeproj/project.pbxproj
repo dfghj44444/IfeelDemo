@@ -33,6 +33,7 @@
 		A80517F5183257AB00E9ADAA /* tail.png in Resources */ = {isa = PBXBuildFile; fileRef = A80517F2183257AB00E9ADAA /* tail.png */; };
 		A80517F718325E5B00E9ADAA /* date.png in Resources */ = {isa = PBXBuildFile; fileRef = A80517F618325E5B00E9ADAA /* date.png */; };
 		A81DC09718084A68003EDE3F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81DC09618084A68003EDE3F /* Default-568h@2x.png */; };
+		A81DFAD718DB1C3200D01EFD /* face in Resources */ = {isa = PBXBuildFile; fileRef = A81DFAD618DB1C3200D01EFD /* face */; };
 		A8227EC918A5EB4400879444 /* text3.png in Resources */ = {isa = PBXBuildFile; fileRef = A8227EC818A5EB4400879444 /* text3.png */; };
 		A8227ECB18A5EB5600879444 /* p3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A8227ECA18A5EB5600879444 /* p3.jpg */; };
 		A8227ECD18A6124E00879444 /* head1.png in Resources */ = {isa = PBXBuildFile; fileRef = A8227ECC18A6124E00879444 /* head1.png */; };
@@ -96,6 +97,7 @@
 		A80517F2183257AB00E9ADAA /* tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tail.png; sourceTree = "<group>"; };
 		A80517F618325E5B00E9ADAA /* date.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = date.png; sourceTree = "<group>"; };
 		A81DC09618084A68003EDE3F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A81DFAD618DB1C3200D01EFD /* face */ = {isa = PBXFileReference; lastKnownFileType = folder; name = face; path = ../../Img/face; sourceTree = "<group>"; };
 		A8227EC818A5EB4400879444 /* text3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = text3.png; sourceTree = "<group>"; };
 		A8227ECA18A5EB5600879444 /* p3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p3.jpg; sourceTree = "<group>"; };
 		A8227ECC18A6124E00879444 /* head1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head1.png; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		3C24BF4B154FA74300084C39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A81DFAD618DB1C3200D01EFD /* face */,
 				A8633B1618B4FE520084D9C4 /* img */,
 				A842DC741858BC3A002D0659 /* round1.png */,
 				A842DC751858BC3A002D0659 /* round2.png */,
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C24BF4F154FA74300084C39 /* InfoPlist.strings in Resources */,
+				A81DFAD718DB1C3200D01EFD /* face in Resources */,
 				A842DC731858AF3C002D0659 /* Img in Resources */,
 				3C24BF5B154FA74300084C39 /* WheelDemoViewController.xib in Resources */,
 				A80517F5183257AB00E9ADAA /* tail.png in Resources */,
@@ -446,7 +450,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
