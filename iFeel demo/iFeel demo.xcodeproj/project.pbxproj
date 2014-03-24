@@ -128,6 +128,12 @@
 		A867985E1827CC0400D50066 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		A867985F1827CC0400D50066 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		A86798601827CC0400D50066 /* FeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedBackViewController.xib; sourceTree = "<group>"; };
+		A897DE0D18E0825F00C84FED /* ifeel 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 114.png"; sourceTree = "<group>"; };
+		A897DE0E18E083B100C84FED /* ifeel 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 57.png"; sourceTree = "<group>"; };
+		A897DE0F18E083BD00C84FED /* ifeel 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 120.png"; sourceTree = "<group>"; };
+		A897DE1018E0842F00C84FED /* ifeel 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 58.png"; sourceTree = "<group>"; };
+		A897DE1118E0844000C84FED /* ifeel 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 29.png"; sourceTree = "<group>"; };
+		A897DE1218E0846D00C84FED /* ifeel 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 80.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,12 @@
 		3C24BF35154FA74200084C39 = {
 			isa = PBXGroup;
 			children = (
+				A897DE1218E0846D00C84FED /* ifeel 80.png */,
+				A897DE1118E0844000C84FED /* ifeel 29.png */,
+				A897DE1018E0842F00C84FED /* ifeel 58.png */,
+				A897DE0F18E083BD00C84FED /* ifeel 120.png */,
+				A897DE0E18E083B100C84FED /* ifeel 57.png */,
+				A897DE0D18E0825F00C84FED /* ifeel 114.png */,
 				A842DC721858AF3C002D0659 /* Img */,
 				A81DC09618084A68003EDE3F /* Default-568h@2x.png */,
 				3C24BF7E154FA86D00084C39 /* QuartzCore.framework */,
