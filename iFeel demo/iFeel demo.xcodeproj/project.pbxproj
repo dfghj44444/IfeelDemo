@@ -45,6 +45,7 @@
 		A82FCC461893DDCE002716F9 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A82FCC3E1893DDCE002716F9 /* FMDatabasePool.m */; };
 		A82FCC471893DDCE002716F9 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A82FCC401893DDCE002716F9 /* FMDatabaseQueue.m */; };
 		A82FCC491893DDCE002716F9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A82FCC431893DDCE002716F9 /* FMResultSet.m */; };
+		A8395C7D18E483020004E1E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8395C7C18E483020004E1E7 /* Images.xcassets */; };
 		A842DC731858AF3C002D0659 /* Img in Resources */ = {isa = PBXBuildFile; fileRef = A842DC721858AF3C002D0659 /* Img */; };
 		A842DC771858BC3A002D0659 /* round1.png in Resources */ = {isa = PBXBuildFile; fileRef = A842DC741858BC3A002D0659 /* round1.png */; };
 		A842DC781858BC3A002D0659 /* round2.png in Resources */ = {isa = PBXBuildFile; fileRef = A842DC751858BC3A002D0659 /* round2.png */; };
@@ -56,10 +57,11 @@
 		A8633B1718B4FE520084D9C4 /* img in Resources */ = {isa = PBXBuildFile; fileRef = A8633B1618B4FE520084D9C4 /* img */; };
 		A86798611827CC0400D50066 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A867985F1827CC0400D50066 /* FeedBackViewController.m */; };
 		A86798621827CC0400D50066 /* FeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A86798601827CC0400D50066 /* FeedBackViewController.xib */; };
+		A8A939A718F6FB1500ACDF24 /* WheelDemoViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8A939A518F6FB1500ACDF24 /* WheelDemoViewController-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C24BF40154FA74300084C39 /* Wheel demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wheel demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C24BF40154FA74300084C39 /* iFeel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFeel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C24BF44154FA74300084C39 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C24BF46154FA74300084C39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C24BF48154FA74300084C39 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +116,8 @@
 		A82FCC401893DDCE002716F9 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
 		A82FCC421893DDCE002716F9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		A82FCC431893DDCE002716F9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A8395C7C18E483020004E1E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Wheel demo/Images.xcassets"; sourceTree = "<group>"; };
+		A8395C7E18E487020004E1E7 /* iFeel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = iFeel.entitlements; path = "Wheel demo/iFeel.entitlements"; sourceTree = "<group>"; };
 		A842DC721858AF3C002D0659 /* Img */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Img; path = ../Img; sourceTree = "<group>"; };
 		A842DC741858BC3A002D0659 /* round1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round1.png; sourceTree = "<group>"; };
 		A842DC751858BC3A002D0659 /* round2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round2.png; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		A897DE1018E0842F00C84FED /* ifeel 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 58.png"; sourceTree = "<group>"; };
 		A897DE1118E0844000C84FED /* ifeel 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 29.png"; sourceTree = "<group>"; };
 		A897DE1218E0846D00C84FED /* ifeel 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ifeel 80.png"; sourceTree = "<group>"; };
+		A8A939A618F6FB1500ACDF24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "Wheel demo/iPad/en.lproj/WheelDemoViewController-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,9 @@
 		3C24BF35154FA74200084C39 = {
 			isa = PBXGroup;
 			children = (
+				A8A939A418F6FAFF00ACDF24 /* iPad */,
+				A8395C7E18E487020004E1E7 /* iFeel.entitlements */,
+				A8395C7C18E483020004E1E7 /* Images.xcassets */,
 				A897DE1218E0846D00C84FED /* ifeel 80.png */,
 				A897DE1118E0844000C84FED /* ifeel 29.png */,
 				A897DE1018E0842F00C84FED /* ifeel 58.png */,
@@ -175,7 +183,7 @@
 		3C24BF41154FA74300084C39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C24BF40154FA74300084C39 /* Wheel demo.app */,
+				3C24BF40154FA74300084C39 /* iFeel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -283,6 +291,14 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		A8A939A418F6FAFF00ACDF24 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				A8A939A518F6FB1500ACDF24 /* WheelDemoViewController-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,7 +316,7 @@
 			);
 			name = "Wheel demo";
 			productName = "Wheel demo";
-			productReference = 3C24BF40154FA74300084C39 /* Wheel demo.app */;
+			productReference = 3C24BF40154FA74300084C39 /* iFeel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -310,10 +326,10 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WheelDemo;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					3C24BF3F154FA74300084C39 = {
-						DevelopmentTeam = HR93X4SZT3;
+						DevelopmentTeam = 2Q77KW2KMU;
 					};
 				};
 			};
@@ -342,6 +358,7 @@
 				3C24BF4F154FA74300084C39 /* InfoPlist.strings in Resources */,
 				A81DFAD718DB1C3200D01EFD /* face in Resources */,
 				A842DC731858AF3C002D0659 /* Img in Resources */,
+				A8395C7D18E483020004E1E7 /* Images.xcassets in Resources */,
 				3C24BF5B154FA74300084C39 /* WheelDemoViewController.xib in Resources */,
 				A80517F5183257AB00E9ADAA /* tail.png in Resources */,
 				A80517E91832470100E9ADAA /* heart.png in Resources */,
@@ -349,6 +366,7 @@
 				3C24BF76154FA80200084C39 /* iPod Click.aiff in Resources */,
 				A81DC09718084A68003EDE3F /* Default-568h@2x.png in Resources */,
 				A842DC771858BC3A002D0659 /* round1.png in Resources */,
+				A8A939A718F6FB1500ACDF24 /* WheelDemoViewController-iPad.xib in Resources */,
 				A80517EF1832510A00E9ADAA /* tail.jpg in Resources */,
 				A86798621827CC0400D50066 /* FeedBackViewController.xib in Resources */,
 				A8227ED318A61C9600879444 /* feel_big.png in Resources */,
@@ -414,6 +432,14 @@
 			name = WheelDemoViewController.xib;
 			sourceTree = "<group>";
 		};
+		A8A939A518F6FB1500ACDF24 /* WheelDemoViewController-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8A939A618F6FB1500ACDF24 /* en */,
+			);
+			name = "WheelDemoViewController-iPad.xib";
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -445,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -472,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -483,15 +509,19 @@
 		3C24BF5F154FA74300084C39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wheel demo/Wheel demo-Prefix.pch";
 				INFOPLIST_FILE = "Wheel demo/Wheel demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = iFeel;
+				PROVISIONING_PROFILE = "663C9848-05D1-49E5-ABE9-B57B6CE78E91";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,16 +529,20 @@
 		3C24BF60154FA74300084C39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wang xingmin (QC9F272L22)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wang xingmin (QC9F272L22)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Wheel demo/Wheel demo-Prefix.pch";
 				INFOPLIST_FILE = "Wheel demo/Wheel demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = iFeel;
+				PROVISIONING_PROFILE = "663C9848-05D1-49E5-ABE9-B57B6CE78E91";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

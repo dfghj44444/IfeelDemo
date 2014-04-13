@@ -16,10 +16,12 @@
 }
 
 + (void)AddRecord: (int)nSegment withString: (NSString*)strContent;
-- (IBAction)testClick:(id)sender;
-- (IBAction)OnRecordClick:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *lblFace;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *pgRecord;
-@property (weak,nonatomic) IBOutlet UIImageView *_ImgView;
+- (IBAction)OnRecordClick:(id)sender;
+
+//@property (weak, nonatomic) IBOutlet UILabel *_lblFace2;
+@property (weak, nonatomic) IBOutlet UILabel *_lblFace3;
+@property (weak, nonatomic) IBOutlet UIImageView *_ImgView3;
+
+//@property (weak,nonatomic) IBOutlet UIImageView *_ImgView2;
 @end

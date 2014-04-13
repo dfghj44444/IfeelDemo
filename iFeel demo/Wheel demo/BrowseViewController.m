@@ -229,7 +229,6 @@
     dateLabel.backgroundColor=[UIColor clearColor];
     UILabel *ageLabel=[[UILabel alloc] initWithFrame:CGRectMake(216, y, 88, 24)];//年龄标签
     ageLabel.font=[UIFont systemFontOfSize:14.0];
-    ageLabel.textAlignment=UITextAlignmentRight;
     ageLabel.textColor = [UIColor darkGrayColor];
     ageLabel.backgroundColor=[UIColor clearColor];
     

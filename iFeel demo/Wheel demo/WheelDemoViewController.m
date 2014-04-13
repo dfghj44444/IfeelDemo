@@ -24,7 +24,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    CDCircle *circle = [[CDCircle alloc] initWithFrame:CGRectMake(10 , 90, 300, 300) numberOfSegments:8 ringWidth:80.f];
+    int nHeight = 90;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        if ([[UIScreen mainScreen] respondsToSelector: @selector(scale)]) {
+            CGSize result = [[UIScreen mainScreen] bounds].size;
+            result = CGSizeMake(result.width * [UIScreen mainScreen].scale, result.height * [UIScreen mainScreen].scale);
+            if (result.height > 960)
+                nHeight = 150;
+        }
+    }
+    
+    CDCircle *circle = [[CDCircle alloc] initWithFrame:CGRectMake(10 , nHeight, 300, 300) numberOfSegments:8 ringWidth:80.f];
     circle.dataSource = self;
     circle.delegate = self;
     CDCircleOverlayView *overlay = [[CDCircleOverlayView alloc] initWithCircle:circle];
@@ -45,20 +55,20 @@
     [self.navigationItem setTitle:@"Ifeel 0.13"];
     
     //添加imageview
-    CGRect imageRect = (CGRect){105, 180, 110, 110};
+    CGRect imageRect = (CGRect){105, 180 + nHeight - 90, 110, 110};
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageRect] ;
     imageView.userInteractionEnabled = YES;
 
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickImage)];
     [imageView addGestureRecognizer:singleTap];
     [self.view addSubview:imageView];
-    self._ImgView =imageView;
+    self._ImgView3 =imageView;
     //添加长按委托
     UILongPressGestureRecognizer *longGnizer=[[UILongPressGestureRecognizer alloc]initWithTarget:self
                                                                                           action:@selector(longGo:)];
-    [self._ImgView addGestureRecognizer:longGnizer];
+    [self._ImgView3 addGestureRecognizer:longGnizer];
     UIImage *image = [UIImage imageNamed: @"text2.png"];
-    [self._ImgView setImage: image];
+    [self._ImgView3 setImage: image];
     
     self->_curSegment = -1;
 }
@@ -68,7 +78,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     UIImage *image = [UIImage imageNamed: @"text.png"];
-    [self._ImgView setImage: image];
+    [self._ImgView3 setImage: image];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -83,12 +93,12 @@
     UIImage *image = [UIImage imageNamed: [NSString stringWithFormat:@"face/%@.png", [arrayPic objectAtIndex:segment]]];
 
     NSArray* array = [NSArray arrayWithObjects: @"吓尿",@"委屈",@"悲伤",@"尴尬",@"纳尼",@"呵呵",@"惊诧",@"卧槽",nil];
-    [self.lblFace setText:[NSString stringWithFormat:@"%@", [array objectAtIndex:segment]]];
+    [self._lblFace3 setText:[NSString stringWithFormat:@"%@", [array objectAtIndex:segment]]];
     
     self->_curSegment = segment;//record it
 
     
-    [self._ImgView setImage: image];
+    [self._ImgView3 setImage: image];
 }
 
 -(UIImage *) circle:(CDCircle *)circle iconForThumbAtRow:(NSInteger)row {
@@ -127,7 +137,7 @@
     [WheelDemoViewController  AddRecord:self->_curSegment withString:@""];
     //clear
     UIImage *image = [UIImage imageNamed: @"text.png"];
-    [self._ImgView setImage: image];
+    [self._ImgView3 setImage: image];
     // here, do whatever you wantto do
     FeedBackViewController *aViewController = [[FeedBackViewController alloc] init];
   
@@ -148,26 +158,14 @@
             [accountDefaults setInteger:self->_curSegment forKey:@"curSegment"];
             //clear
             UIImage *image = [UIImage imageNamed: @"text.png"];
-            [self._ImgView setImage: image];
+            [self._ImgView3 setImage: image];
             
             [[self navigationController]  pushViewController:aViewController animated:true];
         }
     }
 }
 
-- (IBAction)testClick:(id)sender {
-    FeedBackViewController *aViewController = [[FeedBackViewController alloc] init];
-    if(self.navigationController == nil)
-    {
-        NSLog(@"nil");
-        //[self presentModalViewController:aViewController animated:TRUE];
-    }
-    else if ( self->_curSegment != -1)
-    {
-        NSLog(@"not nil");
-        [[self navigationController]  pushViewController:aViewController animated:true];
-    }
- }
+
 
 - (IBAction)OnRecordClick:(id)sender {
     BrowseViewController *aViewController = [[BrowseViewController alloc] init];
